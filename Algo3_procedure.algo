@@ -1,0 +1,35 @@
+Procedure dot_product (v1, v2 : ARRAY_OF FLOAT; n : INTERGER; ps : FLOAT )
+Var
+i : INTERGER;
+
+BEGIN
+n := v1.lenght, v2.lenght;
+ps := 0;
+For i from 0 to n-1 Step 1 Do
+    ps := ps + (v1[i] * v2[i]);
+End For
+Write(ps);
+END;
+
+ALGORITHM dot_product
+Var
+v1, v2 : ARRAY_OF FLOAT [];
+i, n : INTERGER;
+
+BEGIN
+Read(n);
+For i from 0 to n-1 Step 1 Do
+    Read (v1[i]);
+End For
+For i from 0 to n-1 Step 1 Do
+    Read (v2[i]);
+End For
+dot_product(v1, v2, n, ps);
+Write(ps);
+If (ps := 0) Then
+    Write ("V1 and V2 are orthogonal");
+Else
+    Write ("V1 and V2 are not orthogonal");
+End If
+
+END;
